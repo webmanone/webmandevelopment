@@ -17,19 +17,15 @@
     height: auto;
     }
     
-    .btn {
-     cursor: pointer;
-    }
-     .active {
-  background-color: #4CAF50;
-          }
-
     ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
 li {
@@ -44,30 +40,23 @@ li a {
   text-decoration: none;
 }
 
-
 li a:hover {
   background-color: #111;
 }
-  </style>
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
 </head>
 <body>
   
-  <ul id="menu">
-  <li class="btn"><a href="index.html">Home</a></li>
-  <li class="btn"><a href="contact.html">Contact</a></li>
-  <li class="btn"><a class="active" href="about.html">About</a></li>
+  <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a class="active" href="about.html">About</a></li>
 </ul>
- <script>
-  var btnContainer = document.getElementById("menu");
-  var btns = btnContainer.getElementsByClassName("btn");
-  for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
- </script>
+ 
   <div class="w3-container" background-color: #4281f5;>
   <center>
     <h1>
